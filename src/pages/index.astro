@@ -27,13 +27,12 @@ import Layout from '../layouts/Layout.astro';
             AI Researcher @ Amazon AGI SF Lab
           </p>
           <p class="text-gray-300 leading-relaxed mb-6 max-w-xl">
-            I build human-like AI agents, because the only thing more fun than being human is trying to recreate parts of it in silicon. I got my PhD at New York University, where I studied planning and reinforcement learning: how minds and machines decide what to do next when the world is messy, uncertain, and adversarial. These days I focus on LLM post-training, multimodal reasoning, and computer-use agents -- the kind of systems that don’t just talk, but act.
-
+            I build human-like AI agents. My research focuses on multimodal reasoning, computer use agents, and LLM post-training. PhD from NYU in planning and reinforcement learning.
           </p>
           
           <div class="flex flex-wrap gap-3">
             <a href="#featured" class="text-sm px-4 py-2 bg-white text-gray-900 rounded-lg font-medium hover:bg-gray-200 transition-colors">
-              Industry Experience
+              Featured Work
             </a>
             <a href="#contact" class="text-sm px-4 py-2 border border-gray-700 text-gray-300 rounded-lg font-medium hover:border-gray-500 transition-colors">
               Contact
@@ -44,95 +43,78 @@ import Layout from '../layouts/Layout.astro';
     </div>
   </section>
 
-  <!-- Industry Experience Section -->
+  <!-- Featured Work Section (Combined Industry + Research) -->
   <section id="featured" class="py-20 border-t border-gray-800">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="text-sm font-medium text-gray-500 uppercase tracking-wider mb-8">Industry Experience</h2>
+      <h2 class="text-sm font-medium text-gray-500 uppercase tracking-wider mb-8">Featured Work</h2>
       
-      <!-- Nova Act -->
-      <div class="mb-8">
-        <div class="flex items-center gap-3 mb-3">
-          <h3 class="text-xl font-semibold text-white">Amazon Nova Act</h3>
-          <span class="text-xs px-2 py-1 bg-green-900/50 text-green-400 rounded">Production</span>
-        </div>
-        <p class="text-gray-400 mb-4">
-          One of the main contributors to RL training of Nova Act, an AWS service for building reliable AI agents that automate UI workflows with 90%+ task reliability. Trained the model using RL in synthetic web environments.
-        </p>
-        <div class="flex flex-wrap gap-2 mb-4">
-          <span class="text-xs px-2 py-1 bg-gray-800 text-gray-400 rounded">Reinforcement Learning</span>
-          <span class="text-xs px-2 py-1 bg-gray-800 text-gray-400 rounded">Computer Use</span>
-          <span class="text-xs px-2 py-1 bg-gray-800 text-gray-400 rounded">LLM Post-Training</span>
-        </div>
-        <a 
-          href="https://aws.amazon.com/blogs/aws/build-reliable-ai-agents-for-ui-workflow-automation-with-amazon-nova-act-now-generally-available/" 
-          target="_blank" 
-          rel="noopener noreferrer"
-          class="text-sm text-blue-400 hover:text-blue-300 transition-colors"
-        >
-          Read AWS Blog Post →
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- About Section -->
-  <section id="about" class="py-20 border-t border-gray-800">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="text-sm font-medium text-gray-500 uppercase tracking-wider mb-8">About</h2>
-      
-      <div class="text-gray-300 space-y-4 max-w-2xl">
-        <p>
-          When I’m not teaching models what to do, I’m usually snowboarding, hiking, baking desserts, or being supervised by cats who believe they are my bosses.
-
-        </p>
-        <p>
-          I moved from NYC to SF to join the RL research team at AGI SF Lab.
-        </p>
-        <p class="text-gray-500">
-          Outside work: snowboarding, hiking, baking, cats, arieal yoga.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Research Section -->
-  <section id="research" class="py-20 border-t border-gray-800">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="text-sm font-medium text-gray-500 uppercase tracking-wider mb-8">Selected Research</h2>
-      
-      <div class="space-y-6">
-        <article>
-          <div class="flex items-baseline gap-3 mb-1">
-            <h3 class="text-white font-medium">Limitations in Planning Ability in AlphaZero</h3>
-            <span class="text-xs text-gray-500">NeurIPS 2024</span>
-          </div>
-          <p class="text-sm text-gray-500 mb-2">Daisy Xinlei Lin, Brenden Lake, Wei Ji Ma</p>
-          <a href="https://openreview.net/forum?id=ZAbYb4jDJt" target="_blank" class="text-sm text-blue-400 hover:text-blue-300">Paper →</a>
-        </article>
+      <!-- Industry Experience -->
+      <div class="mb-12">
+        <h3 class="text-xs font-medium text-gray-600 uppercase tracking-wider mb-6">Industry</h3>
         
-        <article>
-          <div class="flex items-baseline gap-3 mb-1">
-            <h3 class="text-white font-medium">Comparing Machine and Human Learning in a Planning Task</h3>
-            <span class="text-xs text-gray-500">CogSci 2022</span>
+        <!-- Nova Act -->
+        <div class="mb-8">
+          <div class="flex items-center gap-3 mb-3">
+            <h4 class="text-xl font-semibold text-white">Amazon Nova Act</h4>
+            <span class="text-xs px-2 py-1 bg-green-900/50 text-green-400 rounded">Production</span>
           </div>
-          <p class="text-sm text-gray-500 mb-2">Zhengdong Zheng*, Daisy Xinlei Lin*, Joshua Topping*, Wei Ji Ma</p>
-          <a href="https://escholarship.org/uc/item/8wm748d8" target="_blank" class="text-sm text-blue-400 hover:text-blue-300">Paper →</a>
-        </article>
-        
-        <article>
-          <div class="flex items-baseline gap-3 mb-1">
-            <h3 class="text-white font-medium">Human Planning in Stochastic Environments</h3>
-            <span class="text-xs text-gray-500">PsyArXiv 2025</span>
+          <p class="text-gray-400 mb-4">
+            Major contributor to Nova Act — an AWS service for building reliable AI agents that automate UI workflows with 90%+ task reliability. Trained the model using RL in synthetic web environments.
+          </p>
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span class="text-xs px-2 py-1 bg-gray-800 text-gray-400 rounded">Reinforcement Learning</span>
+            <span class="text-xs px-2 py-1 bg-gray-800 text-gray-400 rounded">Computer Use</span>
+            <span class="text-xs px-2 py-1 bg-gray-800 text-gray-400 rounded">LLM Post-Training</span>
           </div>
-          <p class="text-sm text-gray-500 mb-2">Jingyu Lei, Joost Olieslagers, Nazanin Arfaei, Daisy Xinlei Lin, Wei Ji Ma</p>
-          <a href="https://osf.io/bh56p" target="_blank" class="text-sm text-blue-400 hover:text-blue-300">Paper →</a>
-        </article>
+          <a 
+            href="https://aws.amazon.com/blogs/aws/build-reliable-ai-agents-for-ui-workflow-automation-with-amazon-nova-act-now-generally-available/" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            class="text-sm text-blue-400 hover:text-blue-300 transition-colors"
+          >
+            Read AWS Blog Post →
+          </a>
+        </div>
       </div>
       
-      <div class="mt-8">
-        <a href="https://scholar.google.com/citations?user=PYIV3fcAAAAJ" target="_blank" class="text-sm text-gray-500 hover:text-gray-400">
-          All publications on Google Scholar →
-        </a>
+      <!-- Selected Publications -->
+      <div>
+        <h3 class="text-xs font-medium text-gray-600 uppercase tracking-wider mb-6">Selected Publications</h3>
+        
+        <div class="space-y-6">
+          <article>
+            <div class="flex items-baseline gap-3 mb-1">
+              <h4 class="text-white font-medium">Limitations in Planning Ability in AlphaZero</h4>
+              <span class="text-xs text-gray-500">NeurIPS 2024</span>
+            </div>
+            <p class="text-sm text-gray-500 mb-2">Xinlei Lin, Brenden Lake, Wei Ji Ma</p>
+            <a href="https://openreview.net/forum?id=ZAbYb4jDJt" target="_blank" class="text-sm text-blue-400 hover:text-blue-300">Paper →</a>
+          </article>
+          
+          <article>
+            <div class="flex items-baseline gap-3 mb-1">
+              <h4 class="text-white font-medium">Comparing Machine and Human Learning in a Planning Task</h4>
+              <span class="text-xs text-gray-500">CogSci 2022</span>
+            </div>
+            <p class="text-sm text-gray-500 mb-2">Zhengdong Zheng*, Xinlei Lin*, Joshua Topping*, Wei Ji Ma</p>
+            <a href="https://escholarship.org/uc/item/8wm748d8" target="_blank" class="text-sm text-blue-400 hover:text-blue-300">Paper →</a>
+          </article>
+          
+          <article>
+            <div class="flex items-baseline gap-3 mb-1">
+              <h4 class="text-white font-medium">Human Planning in Stochastic Environments</h4>
+              <span class="text-xs text-gray-500">PsyArXiv 2025</span>
+            </div>
+            <p class="text-sm text-gray-500 mb-2">Jingyu Lei, Joost Olieslagers, Nazanin Arfaei, Xinlei Lin, Wei Ji Ma</p>
+            <a href="https://osf.io/bh56p" target="_blank" class="text-sm text-blue-400 hover:text-blue-300">Paper →</a>
+          </article>
+        </div>
+        
+        <div class="mt-8">
+          <a href="https://scholar.google.com/citations?user=PYIV3fcAAAAJ" target="_blank" class="text-sm text-gray-500 hover:text-gray-400">
+            All publications on Google Scholar →
+          </a>
+        </div>
       </div>
     </div>
   </section>
@@ -158,6 +140,24 @@ import Layout from '../layouts/Layout.astro';
         <a href="https://scholar.google.com/citations?user=PYIV3fcAAAAJ" target="_blank" class="text-gray-300 hover:text-white transition-colors">
           Google Scholar
         </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section (moved to bottom) -->
+  <section id="about" class="py-20 border-t border-gray-800">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-sm font-medium text-gray-500 uppercase tracking-wider mb-8">About</h2>
+      
+      <div class="text-gray-400 space-y-4 max-w-2xl">
+        <p>
+          PhD in Computational Neuroscience from NYU, where I worked with 
+          <a href="https://www.cns.nyu.edu/malab/" target="_blank" rel="noopener" class="text-blue-400 hover:text-blue-300">Dr. Wei Ji Ma</a> 
+          on planning and reinforcement learning.
+        </p>
+        <p class="text-gray-500">
+          Outside work: snowboarding, hiking, baking, cats.
+        </p>
       </div>
     </div>
   </section>
