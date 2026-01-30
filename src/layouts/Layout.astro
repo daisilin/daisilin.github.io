@@ -52,15 +52,12 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     <meta name="generator" content={Astro.generator} />
     
     <script is:inline>
-      // Theme initialization
+      // Theme initialization - default to dark
       const theme = (() => {
         if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
           return localStorage.getItem('theme');
         }
-        if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-          return 'dark';
-        }
-        return 'light';
+        return 'dark'; // Default to dark theme
       })();
       
       if (theme === 'dark') {
