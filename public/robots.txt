@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://daisilin.github.io/xinlei/sitemap-index.xml
+Sitemap: https://daisilin.github.io/sitemap-index.xml

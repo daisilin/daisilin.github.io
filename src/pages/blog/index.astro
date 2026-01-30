@@ -24,7 +24,7 @@ const posts = (await getCollection('blog')).sort(
         <div class="space-y-8">
           {posts.map((post) => (
             <article class="card card-hover p-6 md:p-8 group">
-              <a href={`/xinlei/blog/${post.slug}/`} class="block">
+              <a href={`/blog/${post.slug}/`} class="block">
                 <div class="flex flex-col md:flex-row md:items-start gap-4 md:gap-6">
                   {post.data.heroImage && (
                     <div class="flex-shrink-0 w-full md:w-48 h-32 rounded-lg overflow-hidden">

@@ -1,9 +1,9 @@
 ---
 const navLinks = [
-  { href: '/xinlei/', label: 'Home' },
-  { href: '/xinlei/blog/', label: 'Blog' },
-  { href: '/xinlei/#research', label: 'Research' },
-  { href: '/xinlei/#contact', label: 'Contact' },
+  { href: '/', label: 'Home' },
+  { href: '/blog/', label: 'Blog' },
+  { href: '/#research', label: 'Research' },
+  { href: '/#contact', label: 'Contact' },
 ];
 
 const currentPath = Astro.url.pathname;
@@ -13,7 +13,7 @@ const currentPath = Astro.url.pathname;
   <nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex items-center justify-between h-16">
       <!-- Logo -->
-      <a href="/xinlei/" class="flex items-center gap-2 group">
+      <a href="/" class="flex items-center gap-2 group">
         <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-primary-500 to-accent-500 flex items-center justify-center text-white font-bold text-sm group-hover:scale-110 transition-transform">
           DL
         </div>

@@ -6,7 +6,7 @@ import tailwind from '@astrojs/tailwind';
 // https://astro.build/config
 export default defineConfig({
   site: 'https://daisilin.github.io',
-  base: '/xinlei',
+  // base: '/xinlei',  // No base path needed for username.github.io repos
   integrations: [mdx(), sitemap(), tailwind()],
   markdown: {
     shikiConfig: {
