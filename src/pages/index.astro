@@ -4,37 +4,43 @@ import Layout from '../layouts/Layout.astro';
 
 <Layout title="Home">
   <!-- Hero Section -->
-  <section class="relative min-h-[90vh] flex items-center pt-16">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-      <div class="flex flex-col md:flex-row gap-10 items-center md:items-start">
+  <section class="min-h-[90vh] flex items-center pt-20">
+    <div class="max-w-4xl mx-auto px-6 lg:px-8 py-24">
+      <div class="flex flex-col md:flex-row gap-12 items-center md:items-start">
         <!-- Profile Image -->
-        <div class="flex-shrink-0">
-          <div class="w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden border-2 border-gray-800">
-            <img 
-              src="/profile.jpg" 
+        <div class="flex-shrink-0 reveal">
+          <div class="w-28 h-28 md:w-36 md:h-36 rounded-2xl overflow-hidden ring-1 ring-stone-200 dark:ring-stone-800 hover:ring-accent-400/40 dark:hover:ring-accent-500/30 transition-all duration-500">
+            <img
+              src="/profile.jpg"
               alt="Daisy Xinlei Lin"
               class="w-full h-full object-cover"
             />
           </div>
         </div>
-        
+
         <!-- Text Content -->
         <div>
-          <h1 class="text-3xl md:text-4xl font-bold text-white mb-4">
+          <h1 class="font-serif text-4xl md:text-5xl text-stone-900 dark:text-stone-50 mb-3 reveal delay-1">
             Daisy Xinlei Lin
           </h1>
-          <p class="text-lg text-gray-400 mb-6">
-            AI Researcher @ Amazon AGI SF Lab
+          <p class="text-stone-500 dark:text-stone-400 mb-8 reveal delay-2">
+            AI Researcher &amp; Builder &mdash; Amazon AGI SF Lab
           </p>
-          <p class="text-gray-300 leading-relaxed mb-6 max-w-xl">
-            I build AI agents that act like humans do, because the only thing more fun than being human is trying to recreate parts of it in silicon. I earned my PhD at NYU, where I studied planning and reinforcement learning: how minds and machines decide what to do next when the world is messy, uncertain, and adversarial. These days I work on LLM post-training, reasoning, and agents — systems that don't just talk, but act.
+          <p class="text-stone-600 dark:text-stone-400 leading-relaxed mb-10 max-w-xl reveal delay-3">
+            I study how humans and AI think differently — and build tools that bridge the gap. My PhD at NYU focused on planning, decision-making, and reinforcement learning across thousands of human participants. Now I ship production AI systems and prototype adaptive interfaces that help people build real capability with AI.
           </p>
-          
-          <div class="flex flex-wrap gap-3">
-            <a href="#featured" class="text-sm px-4 py-2 bg-white text-gray-900 rounded-lg font-medium hover:bg-gray-200 transition-colors">
-              Featured Work
+
+          <div class="flex flex-wrap items-center gap-6 reveal delay-4">
+            <a href="/lab/" class="btn-primary group">
+              Interactive Lab
+              <svg class="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+              </svg>
             </a>
-            <a href="#contact" class="text-sm px-4 py-2 border border-gray-700 text-gray-300 rounded-lg font-medium hover:border-gray-500 transition-colors">
+            <a href="#featured" class="text-sm text-stone-500 hover:text-stone-900 dark:hover:text-stone-200 link-underline transition-colors duration-300">
+              Research
+            </a>
+            <a href="#contact" class="text-sm text-stone-500 hover:text-stone-900 dark:hover:text-stone-200 link-underline transition-colors duration-300">
               Contact
             </a>
           </div>
@@ -43,103 +49,117 @@ import Layout from '../layouts/Layout.astro';
     </div>
   </section>
 
-  <!-- Featured Work Section (Combined Industry + Research) -->
-  <section id="featured" class="py-20 border-t border-gray-800">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="text-sm font-medium text-gray-500 uppercase tracking-wider mb-8">Featured Work</h2>
-      
+  <!-- Featured Work Section -->
+  <section id="featured" class="py-24 border-t border-stone-200 dark:border-stone-800">
+    <div class="max-w-4xl mx-auto px-6 lg:px-8">
+      <h2 class="section-label mb-12 reveal">Featured Work</h2>
+
       <!-- Industry Experience -->
-      <div class="mb-12">
-        <h3 class="text-xs font-medium text-gray-600 uppercase tracking-wider mb-6">Industry</h3>
-        
-        <!-- Nova Act -->
-        <div class="mb-8">
-          <div class="flex items-center gap-3 mb-3">
-            <h4 class="text-xl font-semibold text-white">Amazon Nova Act</h4>
-            <span class="text-xs px-2 py-1 bg-green-900/50 text-green-400 rounded">Production</span>
+      <div class="mb-16 reveal">
+        <h3 class="section-label mb-8 !text-stone-300 dark:!text-stone-600">Industry</h3>
+
+        <div class="rounded-xl border border-stone-200 dark:border-stone-800 p-6 md:p-8 hover:border-stone-300 dark:hover:border-stone-700 transition-colors duration-300">
+          <div class="flex items-center gap-3 mb-4">
+            <h4 class="font-serif text-xl text-stone-900 dark:text-stone-100">Amazon Nova Act</h4>
+            <span class="text-xs px-2.5 py-0.5 bg-emerald-50 dark:bg-emerald-950/50 text-emerald-700 dark:text-emerald-400 rounded-full border border-emerald-200 dark:border-emerald-500/20">Production</span>
           </div>
-          <p class="text-gray-400 mb-4">
+          <p class="text-stone-600 dark:text-stone-400 mb-5 leading-relaxed">
             Owned the end-to-end RL training recipe for Nova Act. Designed and shipped an online data curator that improved RL sample efficiency. Diagnosed and resolved a training/inference mismatch that stabilized RL training at scale across agentic tasks. Drove measurable gains in training data diversity and reliability.
           </p>
-          <div class="flex flex-wrap gap-2 mb-4">
-            <span class="text-xs px-2 py-1 bg-gray-800 text-gray-400 rounded">Reinforcement Learning</span>
-            <span class="text-xs px-2 py-1 bg-gray-800 text-gray-400 rounded">Computer Use</span>
-            <span class="text-xs px-2 py-1 bg-gray-800 text-gray-400 rounded">LLM Post-Training</span>
+          <div class="flex flex-wrap gap-2 mb-5">
+            <span class="text-xs px-2.5 py-1 bg-stone-100 dark:bg-stone-800/50 text-stone-500 dark:text-stone-400 rounded-full">Reinforcement Learning</span>
+            <span class="text-xs px-2.5 py-1 bg-stone-100 dark:bg-stone-800/50 text-stone-500 dark:text-stone-400 rounded-full">Computer Use</span>
+            <span class="text-xs px-2.5 py-1 bg-stone-100 dark:bg-stone-800/50 text-stone-500 dark:text-stone-400 rounded-full">LLM Post-Training</span>
           </div>
-          <a 
-            href="https://aws.amazon.com/blogs/aws/build-reliable-ai-agents-for-ui-workflow-automation-with-amazon-nova-act-now-generally-available/" 
-            target="_blank" 
+          <a
+            href="https://aws.amazon.com/blogs/aws/build-reliable-ai-agents-for-ui-workflow-automation-with-amazon-nova-act-now-generally-available/"
+            target="_blank"
             rel="noopener noreferrer"
-            class="text-sm text-blue-400 hover:text-blue-300 transition-colors"
+            class="inline-flex items-center gap-1.5 text-sm text-accent-600 dark:text-accent-400 hover:text-accent-700 dark:hover:text-accent-300 transition-colors duration-300 group"
           >
-            Read AWS Blog Post →
+            Read AWS Blog Post
+            <svg class="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+            </svg>
           </a>
         </div>
       </div>
-      
+
       <!-- Selected Publications -->
-      <div>
-        <h3 class="text-xs font-medium text-gray-600 uppercase tracking-wider mb-6">Selected Publications</h3>
-        
-        <div class="space-y-6">
+      <div class="reveal">
+        <h3 class="section-label mb-8 !text-stone-300 dark:!text-stone-600">Selected Publications</h3>
 
-          <article>
-            <div class="flex items-baseline gap-3 mb-1">
-              <h4 class="text-white font-medium">Diagnosing Component-Level Failures in Computer-Use Agents</h4>
-              <span class="text-xs text-gray-500">COLM 2026 (In review)</span>
-            </div>
-            <p class="text-sm text-gray-500 mb-2">Tianchen Guan, Daisy Xinlei Lin, Xiangjun Wang, Shuyan Zhou</p>
-          </article>
+        <div class="space-y-1">
 
-          <article>
-            <div class="flex items-baseline gap-3 mb-1">
-              <h4 class="text-white font-medium">Limitations in Planning Ability in AlphaZero</h4>
-              <span class="text-xs text-gray-500">NeurIPS 2024</span>
+          <article class="group -mx-4 px-4 py-4 rounded-lg hover:bg-stone-100/60 dark:hover:bg-stone-900/50 transition-colors duration-300">
+            <div class="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-3 mb-1">
+              <h4 class="font-serif text-stone-900 dark:text-stone-100 group-hover:text-accent-700 dark:group-hover:text-accent-400 transition-colors duration-300">Diagnosing Component-Level Failures in Computer-Use Agents</h4>
+              <span class="text-xs text-stone-400 dark:text-stone-500 whitespace-nowrap">COLM 2026 (In review)</span>
             </div>
-            <p class="text-sm text-gray-500 mb-2">Daisy Xinlei Lin, Brenden Lake, Wei Ji Ma</p>
-            <a href="https://openreview.net/forum?id=ZAbYb4jDJt" target="_blank" class="text-sm text-blue-400 hover:text-blue-300">Paper →</a>
-          </article>
-          
-          <article>
-            <div class="flex items-baseline gap-3 mb-1">
-              <h4 class="text-white font-medium">Learning How Humans Learn to Play Board Games with GPT-4</h4>
-              <span class="text-xs text-gray-500">AAAI Workshop 2024 · FCAI AI Day 2023</span>
-            </div>
-            <p class="text-sm text-gray-500 mb-2">Veronica Yeom-Song, Xinlei Lin, Ionatan Kuperwajs, Heiko Schütt, Wei Ji Ma, Luigi Acerbi</p>
+            <p class="text-sm text-stone-500">Tianchen Guan, Daisy Xinlei Lin, Xiangjun Wang, Shuyan Zhou</p>
           </article>
 
-          <article>
-            <div class="flex items-baseline gap-3 mb-1">
-              <h4 class="text-white font-medium">Comparing Machine and Human Learning in a Planning Task</h4>
-              <span class="text-xs text-gray-500">CogSci 2022</span>
+          <article class="group -mx-4 px-4 py-4 rounded-lg hover:bg-stone-100/60 dark:hover:bg-stone-900/50 transition-colors duration-300">
+            <div class="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-3 mb-1">
+              <h4 class="font-serif text-stone-900 dark:text-stone-100 group-hover:text-accent-700 dark:group-hover:text-accent-400 transition-colors duration-300">Limitations in Planning Ability in AlphaZero</h4>
+              <span class="text-xs text-stone-400 dark:text-stone-500 whitespace-nowrap">NeurIPS 2024</span>
             </div>
-            <p class="text-sm text-gray-500 mb-2">Zheyang Sam Zheng*, Xinlei Daisy Lin*, Jake Topping*, Wei Ji Ma</p>
-            <a href="https://escholarship.org/uc/item/8wm748d8" target="_blank" class="text-sm text-blue-400 hover:text-blue-300">Paper →</a>
-          </article>
-          
-          <article>
-            <div class="flex items-baseline gap-3 mb-1">
-              <h4 class="text-white font-medium">Human Planning in Stochastic Environments</h4>
-              <span class="text-xs text-gray-500">PsyArXiv 2025</span>
-            </div>
-            <p class="text-sm text-gray-500 mb-2">Jordan Lei, Jeroen Olieslagers, Nastaran Arfaei, Xinlei Lin, Wei Ji Ma</p>
-            <a href="https://osf.io/bh56p" target="_blank" class="text-sm text-blue-400 hover:text-blue-300">Paper →</a>
+            <p class="text-sm text-stone-500 mb-2">Daisy Xinlei Lin, Brenden Lake, Wei Ji Ma</p>
+            <a href="https://openreview.net/forum?id=ZAbYb4jDJt" target="_blank" class="inline-flex items-center gap-1 text-sm text-accent-600 dark:text-accent-400 hover:text-accent-700 dark:hover:text-accent-300 transition-colors duration-300">
+              Paper
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+            </a>
           </article>
 
-          <article>
-            <div class="flex items-baseline gap-3 mb-1">
-              <h4 class="text-white font-medium">Complementary cortical and thalamic contributions to cell type–specific striatal activity dynamics during movement</h4>
-              <span class="text-xs text-gray-500">Science Advances 2026</span>
+          <article class="group -mx-4 px-4 py-4 rounded-lg hover:bg-stone-100/60 dark:hover:bg-stone-900/50 transition-colors duration-300">
+            <div class="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-3 mb-1">
+              <h4 class="font-serif text-stone-900 dark:text-stone-100 group-hover:text-accent-700 dark:group-hover:text-accent-400 transition-colors duration-300">Learning How Humans Learn to Play Board Games with GPT-4</h4>
+              <span class="text-xs text-stone-400 dark:text-stone-500 whitespace-nowrap">AAAI Workshop 2024</span>
             </div>
-            <p class="text-sm text-gray-500 mb-2">Enida Gjoni, Ram Dyuthi Sristi, Haixin Liu, Shahar Dror, Xinlei Lin, Keelin O'Neil, Oscar M. Arroyo, Sun Woo Hong, Hannah Kim, Jeffrey Liu, Sonja Blumenstock, Byungkook Lim, Gal Mishne, Takaki Komiyama</p>
-            <a href="https://www.science.org/doi/full/10.1126/sciadv.aea3935" target="_blank" class="text-sm text-blue-400 hover:text-blue-300">Paper →</a>
+            <p class="text-sm text-stone-500">Veronica Yeom-Song, Xinlei Lin, Ionatan Kuperwajs, Heiko Sch&uuml;tt, Wei Ji Ma, Luigi Acerbi</p>
           </article>
-          
+
+          <article class="group -mx-4 px-4 py-4 rounded-lg hover:bg-stone-100/60 dark:hover:bg-stone-900/50 transition-colors duration-300">
+            <div class="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-3 mb-1">
+              <h4 class="font-serif text-stone-900 dark:text-stone-100 group-hover:text-accent-700 dark:group-hover:text-accent-400 transition-colors duration-300">Comparing Machine and Human Learning in a Planning Task</h4>
+              <span class="text-xs text-stone-400 dark:text-stone-500 whitespace-nowrap">CogSci 2022</span>
+            </div>
+            <p class="text-sm text-stone-500 mb-2">Zheyang Sam Zheng*, Xinlei Daisy Lin*, Jake Topping*, Wei Ji Ma</p>
+            <a href="https://escholarship.org/uc/item/8wm748d8" target="_blank" class="inline-flex items-center gap-1 text-sm text-accent-600 dark:text-accent-400 hover:text-accent-700 dark:hover:text-accent-300 transition-colors duration-300">
+              Paper
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+            </a>
+          </article>
+
+          <article class="group -mx-4 px-4 py-4 rounded-lg hover:bg-stone-100/60 dark:hover:bg-stone-900/50 transition-colors duration-300">
+            <div class="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-3 mb-1">
+              <h4 class="font-serif text-stone-900 dark:text-stone-100 group-hover:text-accent-700 dark:group-hover:text-accent-400 transition-colors duration-300">Human Planning in Stochastic Environments</h4>
+              <span class="text-xs text-stone-400 dark:text-stone-500 whitespace-nowrap">PsyArXiv 2025</span>
+            </div>
+            <p class="text-sm text-stone-500 mb-2">Jordan Lei, Jeroen Olieslagers, Nastaran Arfaei, Xinlei Lin, Wei Ji Ma</p>
+            <a href="https://osf.io/bh56p" target="_blank" class="inline-flex items-center gap-1 text-sm text-accent-600 dark:text-accent-400 hover:text-accent-700 dark:hover:text-accent-300 transition-colors duration-300">
+              Paper
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+            </a>
+          </article>
+
+          <article class="group -mx-4 px-4 py-4 rounded-lg hover:bg-stone-100/60 dark:hover:bg-stone-900/50 transition-colors duration-300">
+            <div class="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-3 mb-1">
+              <h4 class="font-serif text-stone-900 dark:text-stone-100 group-hover:text-accent-700 dark:group-hover:text-accent-400 transition-colors duration-300">Complementary cortical and thalamic contributions to cell type&ndash;specific striatal activity dynamics during movement</h4>
+              <span class="text-xs text-stone-400 dark:text-stone-500 whitespace-nowrap">Science Advances 2026</span>
+            </div>
+            <p class="text-sm text-stone-500 mb-2">Enida Gjoni, Ram Dyuthi Sristi, Haixin Liu, Shahar Dror, Xinlei Lin, Keelin O'Neil, Oscar M. Arroyo, Sun Woo Hong, Hannah Kim, Jeffrey Liu, Sonja Blumenstock, Byungkook Lim, Gal Mishne, Takaki Komiyama</p>
+            <a href="https://www.science.org/doi/full/10.1126/sciadv.aea3935" target="_blank" class="inline-flex items-center gap-1 text-sm text-accent-600 dark:text-accent-400 hover:text-accent-700 dark:hover:text-accent-300 transition-colors duration-300">
+              Paper
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+            </a>
+          </article>
+
         </div>
-        
-        <div class="mt-8">
-          <a href="https://scholar.google.com/citations?user=PYIV3fcAAAAJ" target="_blank" class="text-sm text-gray-500 hover:text-gray-400">
-            Google Scholar →
+
+        <div class="mt-10">
+          <a href="https://scholar.google.com/citations?user=PYIV3fcAAAAJ" target="_blank" class="text-sm text-stone-500 hover:text-stone-900 dark:hover:text-stone-200 link-underline transition-colors duration-300">
+            All publications on Google Scholar
           </a>
         </div>
       </div>
@@ -147,43 +167,40 @@ import Layout from '../layouts/Layout.astro';
   </section>
 
   <!-- About Section -->
-  <section id="about" class="py-20 border-t border-gray-800">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="text-sm font-medium text-gray-500 uppercase tracking-wider mb-8">About</h2>
-      
-      <div class="text-gray-300 space-y-4 max-w-2xl">
+  <section id="about" class="py-24 border-t border-stone-200 dark:border-stone-800">
+    <div class="max-w-4xl mx-auto px-6 lg:px-8">
+      <h2 class="section-label mb-8 reveal">About</h2>
+
+      <div class="text-stone-600 dark:text-stone-400 space-y-4 max-w-xl leading-relaxed reveal delay-1">
         <p>
           When I'm not teaching models what to do, I'm usually snowboarding, hiking, baking desserts, or being supervised by cats who believe they are my bosses.
         </p>
         <p>
           I moved from NYC to SF to join the RL research team at AGI SF Lab.
         </p>
-        <p class="text-gray-500">
- 
-        </p>
       </div>
     </div>
   </section>
 
   <!-- Contact Section -->
-  <section id="contact" class="py-20 border-t border-gray-800">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="text-sm font-medium text-gray-500 uppercase tracking-wider mb-8">Contact</h2>
-      
-      <div class="flex flex-wrap gap-6 text-sm">
-        <a href="mailto:leixlin@gmail.com" class="text-gray-300 hover:text-white transition-colors">
+  <section id="contact" class="py-24 border-t border-stone-200 dark:border-stone-800">
+    <div class="max-w-4xl mx-auto px-6 lg:px-8">
+      <h2 class="section-label mb-8 reveal">Contact</h2>
+
+      <div class="flex flex-wrap gap-8 text-sm reveal delay-1">
+        <a href="mailto:leixlin@gmail.com" class="text-stone-600 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-100 link-underline transition-colors duration-300">
           leixlin@gmail.com
         </a>
-        <a href="https://twitter.com/leixlin" target="_blank" class="text-gray-300 hover:text-white transition-colors">
+        <a href="https://twitter.com/leixlin" target="_blank" class="text-stone-600 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-100 link-underline transition-colors duration-300">
           Twitter
         </a>
-        <a href="https://www.linkedin.com/in/xinlei-lin-in" target="_blank" class="text-gray-300 hover:text-white transition-colors">
+        <a href="https://www.linkedin.com/in/xinlei-lin-in" target="_blank" class="text-stone-600 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-100 link-underline transition-colors duration-300">
           LinkedIn
         </a>
-        <a href="https://github.com/daisilin" target="_blank" class="text-gray-300 hover:text-white transition-colors">
+        <a href="https://github.com/daisilin" target="_blank" class="text-stone-600 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-100 link-underline transition-colors duration-300">
           GitHub
         </a>
-        <a href="https://scholar.google.com/citations?user=PYIV3fcAAAAJ" target="_blank" class="text-gray-300 hover:text-white transition-colors">
+        <a href="https://scholar.google.com/citations?user=PYIV3fcAAAAJ" target="_blank" class="text-stone-600 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-100 link-underline transition-colors duration-300">
           Google Scholar
         </a>
       </div>

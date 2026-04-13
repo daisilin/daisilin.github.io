@@ -9,8 +9,8 @@ interface Props {
   image?: string;
 }
 
-const { 
-  title, 
+const {
+  title,
   description = "Daisy Xinlei Lin - AI Researcher at Amazon AGI Lab, building human-like AI agents",
   image = "/og-image.png"
 } = Astro.props;
@@ -25,47 +25,47 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="canonical" href={canonicalURL} />
-    
+
     <!-- Primary Meta Tags -->
     <title>{title} | Daisy Xinlei Lin</title>
     <meta name="title" content={`${title} | Daisy Xinlei Lin`} />
     <meta name="description" content={description} />
-    
+
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content={canonicalURL} />
     <meta property="og:title" content={`${title} | Daisy Xinlei Lin`} />
     <meta property="og:description" content={description} />
     <meta property="og:image" content={image} />
-    
+
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content={canonicalURL} />
     <meta property="twitter:title" content={`${title} | Daisy Xinlei Lin`} />
     <meta property="twitter:description" content={description} />
     <meta property="twitter:image" content={image} />
-    
+
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    
+
     <meta name="generator" content={Astro.generator} />
-    
+
     <script is:inline>
       // Theme initialization - default to dark
       const theme = (() => {
         if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
           return localStorage.getItem('theme');
         }
-        return 'dark'; // Default to dark theme
+        return 'dark';
       })();
-      
+
       if (theme === 'dark') {
         document.documentElement.classList.add('dark');
       } else {
         document.documentElement.classList.remove('dark');
       }
-      
+
       window.localStorage.setItem('theme', theme);
     </script>
   </head>
@@ -75,5 +75,24 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
       <slot />
     </main>
     <Footer />
+
+    <script is:inline>
+      // Scroll reveal observer
+      const revealObserver = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+              revealObserver.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.1, rootMargin: '0px 0px -40px 0px' }
+      );
+
+      document.querySelectorAll('.reveal').forEach((el) => {
+        revealObserver.observe(el);
+      });
+    </script>
   </body>
 </html>

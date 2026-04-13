@@ -1,0 +1,131 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import FourInARow from '../../components/game/FourInARow.tsx';
+---
+
+<Layout title="Lab">
+  <section class="min-h-screen pt-24 pb-20">
+    <div class="max-w-4xl mx-auto px-6 lg:px-8">
+      <!-- Lab Header -->
+      <div class="mb-20 reveal">
+        <h1 class="font-serif text-3xl md:text-4xl text-stone-900 dark:text-stone-50 mb-4">Lab</h1>
+        <p class="text-stone-500 dark:text-stone-400 max-w-xl leading-relaxed">
+          Interactive prototypes and research demos exploring how people think, plan, and build capability with AI.
+          These are experiments — some from published research, some new.
+        </p>
+      </div>
+
+      <!-- Projects -->
+      <div class="space-y-20">
+
+        <!-- Mode: Adaptive AI Interface -->
+        <article class="reveal">
+          <div class="mb-8">
+            <div class="flex items-center gap-3 mb-3">
+              <h2 class="font-serif text-xl text-stone-900 dark:text-stone-100">Mode</h2>
+              <span class="text-xs px-2.5 py-0.5 bg-violet-50 dark:bg-violet-950/40 text-violet-700 dark:text-violet-400 rounded-full border border-violet-200 dark:border-violet-500/20">
+                Prototype
+              </span>
+            </div>
+            <p class="text-stone-500 dark:text-stone-400 mb-5 max-w-xl leading-relaxed">
+              An adaptive AI interface that changes how it guides you based on your working style.
+              Built around a cognitive science insight: people approach tasks with systematically different strategies,
+              and interfaces should adapt to that — not force everyone into the same workflow.
+            </p>
+            <div class="flex flex-wrap gap-2 mb-5">
+              <span class="text-xs px-2.5 py-1 bg-stone-100 dark:bg-stone-800/50 text-stone-500 dark:text-stone-400 rounded-full">React</span>
+              <span class="text-xs px-2.5 py-1 bg-stone-100 dark:bg-stone-800/50 text-stone-500 dark:text-stone-400 rounded-full">TypeScript</span>
+              <span class="text-xs px-2.5 py-1 bg-stone-100 dark:bg-stone-800/50 text-stone-500 dark:text-stone-400 rounded-full">Tailwind CSS</span>
+              <span class="text-xs px-2.5 py-1 bg-stone-100 dark:bg-stone-800/50 text-stone-500 dark:text-stone-400 rounded-full">Framer Motion</span>
+              <span class="text-xs px-2.5 py-1 bg-stone-100 dark:bg-stone-800/50 text-stone-500 dark:text-stone-400 rounded-full">Cognitive Science</span>
+            </div>
+            <div class="flex gap-6">
+              <a href="https://github.com/daisilin/mode" target="_blank" rel="noopener"
+                class="inline-flex items-center gap-1.5 text-sm text-accent-600 dark:text-accent-400 hover:text-accent-700 dark:hover:text-accent-300 transition-colors duration-300 group">
+                GitHub
+                <svg class="w-3 h-3 group-hover:translate-x-0.5 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+              </a>
+              <a href="#" target="_blank" rel="noopener"
+                class="inline-flex items-center gap-1.5 text-sm text-accent-600 dark:text-accent-400 hover:text-accent-700 dark:hover:text-accent-300 transition-colors duration-300 group">
+                Live Demo
+                <svg class="w-3 h-3 group-hover:translate-x-0.5 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Mode preview cards -->
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
+            {[
+              { name: 'Planner', color: '#3B82F6', desc: 'Structure first' },
+              { name: 'Explorer', color: '#8B5CF6', desc: 'Follow curiosity' },
+              { name: 'Driver', color: '#F97316', desc: 'Move fast' },
+              { name: 'Coach', color: '#22C55E', desc: 'Step by step' },
+            ].map(mode => (
+              <div
+                class="rounded-xl p-4 border transition-all duration-300 hover:-translate-y-0.5"
+                style={`background: ${mode.color}08; border-color: ${mode.color}18;`}
+              >
+                <h3 class="text-sm font-medium mb-1" style={`color: ${mode.color}`}>{mode.name}</h3>
+                <p class="text-xs text-stone-500">{mode.desc}</p>
+              </div>
+            ))}
+          </div>
+        </article>
+
+        <!-- Four-in-a-Row -->
+        <article class="reveal">
+          <div class="mb-8">
+            <div class="flex items-center gap-3 mb-3">
+              <h2 class="font-serif text-xl text-stone-900 dark:text-stone-100">Four-in-a-Row vs AI</h2>
+              <span class="text-xs px-2.5 py-0.5 bg-sky-50 dark:bg-sky-950/40 text-sky-700 dark:text-sky-400 rounded-full border border-sky-200 dark:border-sky-500/20">
+                Interactive
+              </span>
+            </div>
+            <p class="text-stone-500 dark:text-stone-400 mb-5 max-w-xl leading-relaxed">
+              Play the game from our NeurIPS 2024 paper on AI planning. This 4x9 board variant
+              (free placement, connect 4 to win) was used to study how AlphaZero and humans develop
+              different planning strategies. The AI uses minimax search — can you beat it?
+            </p>
+            <div class="flex flex-wrap gap-2 mb-5">
+              <span class="text-xs px-2.5 py-1 bg-stone-100 dark:bg-stone-800/50 text-stone-500 dark:text-stone-400 rounded-full">Game AI</span>
+              <span class="text-xs px-2.5 py-1 bg-stone-100 dark:bg-stone-800/50 text-stone-500 dark:text-stone-400 rounded-full">Minimax</span>
+              <span class="text-xs px-2.5 py-1 bg-stone-100 dark:bg-stone-800/50 text-stone-500 dark:text-stone-400 rounded-full">NeurIPS 2024</span>
+            </div>
+          </div>
+
+          <!-- The actual game -->
+          <div class="rounded-xl border border-stone-200 dark:border-stone-800 p-4 sm:p-8 bg-white dark:bg-stone-900/30">
+            <FourInARow client:load />
+          </div>
+        </article>
+
+        <!-- Research Context -->
+        <article class="border-t border-stone-200 dark:border-stone-800 pt-16 reveal">
+          <h2 class="section-label mb-8">Research Context</h2>
+          <p class="text-stone-500 dark:text-stone-400 max-w-xl leading-relaxed mb-4">
+            My research explores how humans and AI approach complex planning differently.
+            During my PhD, I ran large-scale behavioral experiments with thousands of participants
+            across 9 different planning games, identifying latent dimensions of how people
+            build strategic skill over time.
+          </p>
+          <p class="text-stone-500 dark:text-stone-400 max-w-xl leading-relaxed mb-8">
+            This work informs everything I build — from agent training pipelines at Amazon
+            to adaptive interfaces like Mode. The core question: <em class="text-stone-700 dark:text-stone-300">how should AI tools
+            adapt to the way people actually think?</em>
+          </p>
+          <div class="flex gap-6">
+            <a href="https://scholar.google.com/citations?user=PYIV3fcAAAAJ" target="_blank" rel="noopener"
+              class="text-sm text-stone-500 hover:text-stone-900 dark:hover:text-stone-200 link-underline transition-colors duration-300">
+              Google Scholar
+            </a>
+            <a href="https://github.com/daisilin" target="_blank" rel="noopener"
+              class="text-sm text-stone-500 hover:text-stone-900 dark:hover:text-stone-200 link-underline transition-colors duration-300">
+              GitHub
+            </a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+</Layout>
