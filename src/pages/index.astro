@@ -4,7 +4,7 @@ import Layout from '../layouts/Layout.astro';
 
 <Layout title="Home">
   <!-- Hero Section -->
-  <section class="min-h-[90vh] flex items-center pt-20">
+  <section class="min-h-[85vh] flex items-center pt-20">
     <div class="max-w-4xl mx-auto px-6 lg:px-8 py-24">
       <div class="flex flex-col md:flex-row gap-12 items-center md:items-start">
         <!-- Profile Image -->
@@ -24,11 +24,19 @@ import Layout from '../layouts/Layout.astro';
             Daisy Xinlei Lin
           </h1>
           <p class="text-stone-500 dark:text-stone-400 mb-8 reveal delay-2">
-            AI Researcher &amp; Builder &mdash; Amazon AGI SF Lab
+            Research Scientist &amp; Engineer &mdash; Amazon AGI SF Lab
           </p>
-          <p class="text-stone-600 dark:text-stone-400 leading-relaxed mb-10 max-w-xl reveal delay-3">
-            I study how humans and AI think differently — and build tools that bridge the gap. My PhD at NYU focused on planning, decision-making, and reinforcement learning across thousands of human participants. Now I ship production AI systems and prototype adaptive interfaces that help people build real capability with AI.
-          </p>
+          <div class="text-stone-600 dark:text-stone-400 leading-relaxed max-w-xl space-y-4 mb-10 reveal delay-3">
+            <p>
+              I work on RL post-training for AI agents. At Amazon AGI SF Lab, I led the training recipe for <a href="https://aws.amazon.com/blogs/aws/build-reliable-ai-agents-for-ui-workflow-automation-with-amazon-nova-act-now-generally-available/" target="_blank" rel="noopener" class="text-stone-900 dark:text-stone-200 underline decoration-stone-300 dark:decoration-stone-700 underline-offset-[3px] hover:decoration-accent-400 transition-colors duration-300">Nova Act</a> &mdash; Amazon's production browser-use agent &mdash; and build evaluation frameworks for agentic systems.
+            </p>
+            <p>
+              My PhD at NYU was about how humans plan and learn: I ran large-scale experiments to understand what makes people get better at complex tasks, and how that compares to AI.
+            </p>
+            <p>
+              I think the best tools should adapt to how people actually think. I also think they should be beautiful.
+            </p>
+          </div>
 
           <div class="flex flex-wrap items-center gap-6 reveal delay-4">
             <a href="/lab/" class="btn-primary group">
@@ -49,8 +57,29 @@ import Layout from '../layouts/Layout.astro';
     </div>
   </section>
 
+  <!-- Right Now Section -->
+  <section class="py-20 border-t border-stone-200 dark:border-stone-800">
+    <div class="max-w-4xl mx-auto px-6 lg:px-8">
+      <h2 class="section-label mb-10 reveal">Right now</h2>
+
+      <div class="grid grid-cols-1 sm:grid-cols-[7rem_1fr] gap-x-8 gap-y-5 reveal delay-1">
+        <span class="text-xs font-medium uppercase tracking-wider text-stone-400 dark:text-stone-600 sm:pt-0.5">teaching</span>
+        <p class="text-stone-600 dark:text-stone-400">My parents and grandparents to use AI tools. Turns out this is harder than RL post-training.</p>
+
+        <span class="text-xs font-medium uppercase tracking-wider text-stone-400 dark:text-stone-600 sm:pt-0.5">thinking</span>
+        <p class="text-stone-600 dark:text-stone-400">How do we prevent people's thoughts from becoming homogeneous?</p>
+
+        <span class="text-xs font-medium uppercase tracking-wider text-stone-400 dark:text-stone-600 sm:pt-0.5">making</span>
+        <p class="text-stone-600 dark:text-stone-400">Tiramisu, ceramics, and gains.</p>
+
+        <span class="text-xs font-medium uppercase tracking-wider text-stone-400 dark:text-stone-600 sm:pt-0.5">managed by</span>
+        <p class="text-stone-600 dark:text-stone-400">Boba and Milk &mdash; two cats who take their supervisory roles extremely seriously.</p>
+      </div>
+    </div>
+  </section>
+
   <!-- Featured Work Section -->
-  <section id="featured" class="py-24 border-t border-stone-200 dark:border-stone-800">
+  <section id="featured" class="py-20 border-t border-stone-200 dark:border-stone-800">
     <div class="max-w-4xl mx-auto px-6 lg:px-8">
       <h2 class="section-label mb-12 reveal">Featured Work</h2>
 
@@ -167,23 +196,26 @@ import Layout from '../layouts/Layout.astro';
   </section>
 
   <!-- About Section -->
-  <section id="about" class="py-24 border-t border-stone-200 dark:border-stone-800">
+  <section id="about" class="py-20 border-t border-stone-200 dark:border-stone-800">
     <div class="max-w-4xl mx-auto px-6 lg:px-8">
       <h2 class="section-label mb-8 reveal">About</h2>
 
       <div class="text-stone-600 dark:text-stone-400 space-y-4 max-w-xl leading-relaxed reveal delay-1">
         <p>
-          When I'm not teaching models what to do, I'm usually snowboarding, hiking, baking desserts, or being supervised by cats who believe they are my bosses.
+          I like pretty things and I think the best tools should be beautiful. I snowboard when I can &mdash; Hokkaido is the dream &mdash; bake when I need to think (signature: tiramisu), and make ceramics because building things you can hold hits different.
         </p>
         <p>
-          I moved from NYC to SF to join the RL research team at AGI SF Lab.
+          People ask about my skincare routine more than my research, which I find extremely funny. Happy to talk about both.
+        </p>
+        <p>
+          I believe my entire PhD could be done in two months with the tools we have today. That's not a complaint &mdash; it's the most exciting thing about this moment.
         </p>
       </div>
     </div>
   </section>
 
   <!-- Contact Section -->
-  <section id="contact" class="py-24 border-t border-stone-200 dark:border-stone-800">
+  <section id="contact" class="py-20 border-t border-stone-200 dark:border-stone-800">
     <div class="max-w-4xl mx-auto px-6 lg:px-8">
       <h2 class="section-label mb-8 reveal">Contact</h2>
 
