@@ -31,7 +31,7 @@ import FourInARow from '../../components/game/FourInARow.tsx';
               A platform for cognitive scientists, psychologists, behavioral researchers &mdash; anyone who designs experiments with human participants &mdash; to prototype, simulate, and analyze studies in minutes instead of weeks.
             </p>
             <p class="text-stone-500 dark:text-stone-400 mb-5 max-w-xl leading-relaxed text-sm">
-              Simulations are grounded in two layers. A <strong class="text-stone-600 dark:text-stone-300">parametric engine</strong> encodes established cognitive mechanisms from the literature &mdash; latent factor models calibrated to published factor loadings, BFS-computed construal probabilities, Big Five trait covariance &mdash; so the fast path produces psychologically plausible data, not random noise. An <strong class="text-stone-600 dark:text-stone-300">LLM-as-participant</strong> mode adds process-level richness: identity-driven personas where behavior emerges naturally from who the simulated person <em>is</em> (a phone-checking 19-year-old, a methodical retiree), producing chain-of-thought traces and strategy descriptions. Both are validated against published findings (Ho et al. Nature 2022, Lin &amp; Ma NComms).
+              Both simulation modes are grounded in established cognitive mechanisms from the literature &mdash; latent factor models calibrated to published factor loadings, BFS-computed construal probabilities, Big Five trait covariance. A <strong class="text-stone-600 dark:text-stone-300">parametric engine</strong> gives you instant, deterministic results for rapid iteration. An <strong class="text-stone-600 dark:text-stone-300">LLM-as-participant</strong> mode uses identity-driven personas built on those same mechanisms, adding process-level richness &mdash; chain-of-thought traces, strategy descriptions, and behavior that emerges from who the simulated person <em>is</em> (a phone-checking 19-year-old, a methodical retiree). Both are validated against published findings (Ho et al. Nature 2022, Lin &amp; Ma NComms).
             </p>
 
             <!-- Key capabilities -->
@@ -42,7 +42,7 @@ import FourInARow from '../../components/game/FourInARow.tsx';
               </div>
               <div class="rounded-xl p-4 border border-stone-200 dark:border-stone-800 bg-white/50 dark:bg-stone-900/30">
                 <p class="text-xs font-medium uppercase tracking-wider text-accent-600 dark:text-accent-400 mb-1.5">Simulate</p>
-                <p class="text-sm text-stone-600 dark:text-stone-400">Parametric engine grounded in cognitive mechanisms, or LLM personas for process-level data &mdash; calibrated to published results</p>
+                <p class="text-sm text-stone-600 dark:text-stone-400">Both modes grounded in cognitive mechanisms from the literature &mdash; fast parametric or rich LLM-as-participant</p>
               </div>
               <div class="rounded-xl p-4 border border-stone-200 dark:border-stone-800 bg-white/50 dark:bg-stone-900/30">
                 <p class="text-xs font-medium uppercase tracking-wider text-accent-600 dark:text-accent-400 mb-1.5">Analyze</p>
@@ -77,10 +77,10 @@ import FourInARow from '../../components/game/FourInARow.tsx';
             <p class="text-xs font-medium uppercase tracking-wider text-stone-400 dark:text-stone-500 mb-4">Why this matters</p>
             <div class="space-y-3 text-sm text-stone-600 dark:text-stone-400 leading-relaxed">
               <p class="pl-7 relative before:content-['✦'] before:absolute before:left-0 before:text-accent-400/60 dark:before:text-accent-500/40">
-                Parametric simulations encode real cognitive mechanisms &mdash; latent factor models, construal probabilities from path salience, trait covariance structures &mdash; not just statistical noise
+                Both simulation modes encode real cognitive mechanisms &mdash; latent factor models, construal probabilities from path salience, trait covariance &mdash; not just statistical noise or prompt engineering
               </p>
               <p class="pl-7 relative before:content-['✦'] before:absolute before:left-0 before:text-accent-400/60 dark:before:text-accent-500/40">
-                LLM personas add process-level richness: behavior emerges from identity (age, motivation, cognitive style), producing chain-of-thought traces researchers can inspect
+                LLM personas are built on those same mechanisms, adding chain-of-thought traces and strategy descriptions researchers can inspect
               </p>
               <p class="pl-7 relative before:content-['✦'] before:absolute before:left-0 before:text-accent-400/60 dark:before:text-accent-500/40">
                 Construal effect replicates at 85% of published human data (Ho et al. Nature 2022) &mdash; and the tool is honest about where it diverges and why
