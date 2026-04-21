@@ -10,13 +10,79 @@ import FourInARow from '../../components/game/FourInARow.tsx';
       <div class="mb-20 reveal">
         <h1 class="font-serif text-3xl md:text-4xl text-stone-900 dark:text-stone-50 mb-4">Lab</h1>
         <p class="text-stone-500 dark:text-stone-400 max-w-xl leading-relaxed">
-          Interactive prototypes and research demos exploring how people think, plan, and build capability with AI.
-          These are experiments — some from published research, some new.
+          Prototypes exploring how AI can make people genuinely more capable.
+          Each one starts from a research question and ships as something you can actually use.
         </p>
       </div>
 
       <!-- Projects -->
       <div class="space-y-20">
+
+        <!-- Nightshift: AI Experiment Design Platform -->
+        <article class="reveal">
+          <div class="mb-8">
+            <div class="flex items-center gap-3 mb-3">
+              <h2 class="font-serif text-2xl text-stone-900 dark:text-stone-100">Nightshift</h2>
+              <span class="text-xs px-2.5 py-0.5 bg-violet-50 dark:bg-violet-950/40 text-violet-700 dark:text-violet-400 rounded-full border border-violet-200 dark:border-violet-500/20">
+                Full-stack app
+              </span>
+            </div>
+            <p class="text-stone-600 dark:text-stone-300 mb-4 max-w-xl leading-relaxed text-base">
+              A platform that lets researchers design, simulate, and analyze behavioral experiments in minutes instead of weeks. Built as a research tool and a case study in AI-as-capability-partner.
+            </p>
+            <p class="text-stone-500 dark:text-stone-400 mb-5 max-w-xl leading-relaxed text-sm">
+              The core idea: instead of running expensive pilot studies, researchers chat with an AI design agent that proposes experiments, then instantly simulate hundreds of participants using identity-driven LLM personas &mdash; personas that behave differently not because you told them to make mistakes, but because they <em>are</em> a distracted 19-year-old or a careful 71-year-old retiree. Results are validated against published papers (Ho et al. Nature 2022, Lin &amp; Ma NComms).
+            </p>
+
+            <!-- Key capabilities -->
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-6">
+              <div class="rounded-xl p-4 border border-stone-200 dark:border-stone-800 bg-white/50 dark:bg-stone-900/30">
+                <p class="text-xs font-medium uppercase tracking-wider text-accent-600 dark:text-accent-400 mb-1.5">Design</p>
+                <p class="text-sm text-stone-600 dark:text-stone-400">Conversational AI agent proposes experiment variants with three distinct research personas</p>
+              </div>
+              <div class="rounded-xl p-4 border border-stone-200 dark:border-stone-800 bg-white/50 dark:bg-stone-900/30">
+                <p class="text-xs font-medium uppercase tracking-wider text-accent-600 dark:text-accent-400 mb-1.5">Simulate</p>
+                <p class="text-sm text-stone-600 dark:text-stone-400">Instant parametric simulation or LLM-as-participant &mdash; 262 tests, calibrated to real human data</p>
+              </div>
+              <div class="rounded-xl p-4 border border-stone-200 dark:border-stone-800 bg-white/50 dark:bg-stone-900/30">
+                <p class="text-xs font-medium uppercase tracking-wider text-accent-600 dark:text-accent-400 mb-1.5">Analyze</p>
+                <p class="text-sm text-stone-600 dark:text-stone-400">Opus-powered analysis chat with heatmaps, factor analysis, and peer-review simulation</p>
+              </div>
+            </div>
+
+            <div class="flex flex-wrap gap-2 mb-5">
+              <span class="text-xs px-2.5 py-1 bg-stone-100 dark:bg-stone-800/50 text-stone-500 dark:text-stone-400 rounded-full">React 19</span>
+              <span class="text-xs px-2.5 py-1 bg-stone-100 dark:bg-stone-800/50 text-stone-500 dark:text-stone-400 rounded-full">TypeScript</span>
+              <span class="text-xs px-2.5 py-1 bg-stone-100 dark:bg-stone-800/50 text-stone-500 dark:text-stone-400 rounded-full">Framer Motion</span>
+              <span class="text-xs px-2.5 py-1 bg-stone-100 dark:bg-stone-800/50 text-stone-500 dark:text-stone-400 rounded-full">Claude API</span>
+              <span class="text-xs px-2.5 py-1 bg-stone-100 dark:bg-stone-800/50 text-stone-500 dark:text-stone-400 rounded-full">Vercel</span>
+              <span class="text-xs px-2.5 py-1 bg-stone-100 dark:bg-stone-800/50 text-stone-500 dark:text-stone-400 rounded-full">Cognitive Science</span>
+            </div>
+            <div class="flex gap-6">
+              <a href="https://github.com/daisilin/nightshift" target="_blank" rel="noopener"
+                class="inline-flex items-center gap-1.5 text-sm text-accent-600 dark:text-accent-400 hover:text-accent-700 dark:hover:text-accent-300 transition-colors duration-300 group">
+                GitHub
+                <svg class="w-3 h-3 group-hover:translate-x-0.5 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Nightshift feature highlights -->
+          <div class="rounded-xl border border-stone-200 dark:border-stone-800 p-6 bg-white/50 dark:bg-stone-900/30">
+            <p class="text-xs font-medium uppercase tracking-wider text-stone-400 dark:text-stone-500 mb-4">Why this matters</p>
+            <div class="space-y-3 text-sm text-stone-600 dark:text-stone-400 leading-relaxed">
+              <p class="pl-7 relative before:content-['✦'] before:absolute before:left-0 before:text-accent-400/60 dark:before:text-accent-500/40">
+                Identity-driven LLM personas are a novel approach &mdash; behavior emerges from who the persona <em>is</em>, not from explicit instructions to "be inaccurate"
+              </p>
+              <p class="pl-7 relative before:content-['✦'] before:absolute before:left-0 before:text-accent-400/60 dark:before:text-accent-500/40">
+                Construal effect replicates at 85% of published human data using BFS-computed path salience
+              </p>
+              <p class="pl-7 relative before:content-['✦'] before:absolute before:left-0 before:text-accent-400/60 dark:before:text-accent-500/40">
+                The tool is honest about its limits &mdash; it flags where simulation diverges from human behavior and why
+              </p>
+            </div>
+          </div>
+        </article>
 
         <!-- Mode: Adaptive AI Interface -->
         <article class="reveal">
@@ -30,7 +96,7 @@ import FourInARow from '../../components/game/FourInARow.tsx';
             <p class="text-stone-500 dark:text-stone-400 mb-5 max-w-xl leading-relaxed">
               An adaptive AI interface that changes how it guides you based on your working style.
               Built around a cognitive science insight: people approach tasks with systematically different strategies,
-              and interfaces should adapt to that — not force everyone into the same workflow.
+              and interfaces should adapt to that &mdash; not force everyone into the same workflow.
             </p>
             <div class="flex flex-wrap gap-2 mb-5">
               <span class="text-xs px-2.5 py-1 bg-stone-100 dark:bg-stone-800/50 text-stone-500 dark:text-stone-400 rounded-full">React</span>
@@ -43,11 +109,6 @@ import FourInARow from '../../components/game/FourInARow.tsx';
               <a href="https://github.com/daisilin/mode" target="_blank" rel="noopener"
                 class="inline-flex items-center gap-1.5 text-sm text-accent-600 dark:text-accent-400 hover:text-accent-700 dark:hover:text-accent-300 transition-colors duration-300 group">
                 GitHub
-                <svg class="w-3 h-3 group-hover:translate-x-0.5 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
-              </a>
-              <a href="#" target="_blank" rel="noopener"
-                class="inline-flex items-center gap-1.5 text-sm text-accent-600 dark:text-accent-400 hover:text-accent-700 dark:hover:text-accent-300 transition-colors duration-300 group">
-                Live Demo
                 <svg class="w-3 h-3 group-hover:translate-x-0.5 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
               </a>
             </div>
@@ -101,17 +162,12 @@ import FourInARow from '../../components/game/FourInARow.tsx';
 
         <!-- Research Context -->
         <article class="border-t border-stone-200 dark:border-stone-800 pt-16 reveal">
-          <h2 class="section-label mb-8">Research Context</h2>
+          <h2 class="section-label mb-8">The thread connecting all of this</h2>
           <p class="text-stone-500 dark:text-stone-400 max-w-xl leading-relaxed mb-4">
-            My research explores how humans and AI approach complex planning differently.
-            During my PhD, I ran large-scale behavioral experiments with thousands of participants
-            across 9 different planning games, identifying latent dimensions of how people
-            build strategic skill over time.
+            My PhD studied how people develop skill at complex tasks &mdash; running large-scale experiments with thousands of participants across 9 planning games, identifying what makes some people get dramatically better while others plateau.
           </p>
           <p class="text-stone-500 dark:text-stone-400 max-w-xl leading-relaxed mb-8">
-            This work informs everything I build — from agent training pipelines at Amazon
-            to adaptive interfaces like Mode. The core question: <em class="text-stone-700 dark:text-stone-300">how should AI tools
-            adapt to the way people actually think?</em>
+            That research shapes everything I build. Nightshift simulates how diverse humans would experience an experiment. Mode adapts its interface to your cognitive style. The RL work at Amazon trains agents that collaborate with humans, not replace them. The core question: <em class="text-stone-700 dark:text-stone-300">how do we design AI that makes people progressively more capable?</em>
           </p>
           <div class="flex gap-6">
             <a href="https://scholar.google.com/citations?user=PYIV3fcAAAAJ" target="_blank" rel="noopener"
