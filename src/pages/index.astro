@@ -31,7 +31,7 @@ import Layout from '../layouts/Layout.astro';
           </p>
           <div class="text-stone-600 dark:text-stone-400 leading-relaxed max-w-xl space-y-4 mb-10 reveal delay-3">
             <p>
-              I work on RL post-training for AI agents. At Amazon AGI SF Lab, I worked on the end-to-end RL training recipe for <a href="https://aws.amazon.com/blogs/aws/build-reliable-ai-agents-for-ui-workflow-automation-with-amazon-nova-act-now-generally-available/" target="_blank" rel="noopener" class="text-stone-900 dark:text-stone-200 underline decoration-stone-300 dark:decoration-stone-700 underline-offset-[3px] hover:decoration-accent-400 transition-colors duration-300">Nova Act</a> (Amazon's production browser-use agent), and build evaluation frameworks for agentic systems.
+              I build zero-to-one SFT/RL recipes for frontier agents: I identify failure modes, turn them into targeted data and environments, design evaluations, and debug production-scale training to achieve stable learning. I currently own this process for a 100B mixture-of-experts coding agent, raising Terminal-Bench 2.0 from 10% to 45% and reaching 70% on SWE-bench Verified. Previously, I built and shipped <a href="https://www.amazon.science/blog/amazon-nova-act-service" target="_blank" rel="noopener" class="text-stone-900 dark:text-stone-200 underline decoration-stone-300 dark:decoration-stone-700 underline-offset-[3px] hover:decoration-accent-400 transition-colors duration-300">Nova Act's</a> RL recipe from scratch—including algorithm experiments, environment scoping, online data curation, and fixes for reward collapse and train–inference mismatch. Nova Act launched with state-of-the-art performance on REAL Bench and matched Claude Sonnet 4.5 on WebArena. Across both projects, my favorite part is finding the failure mode no one has named yet, making it measurable, and building the training system that fixes it.
             </p>
             <p>
               My PhD at NYU was about how humans plan and learn: I ran large-scale experiments to understand what makes people get better at complex tasks, and how that compares to AI.
@@ -78,7 +78,7 @@ import Layout from '../layouts/Layout.astro';
             <span class="text-xs px-2.5 py-0.5 bg-emerald-50 dark:bg-emerald-950/50 text-emerald-700 dark:text-emerald-400 rounded-full border border-emerald-200 dark:border-emerald-500/20">Production</span>
           </div>
           <p class="text-stone-600 dark:text-stone-400 mb-5 leading-relaxed">
-            Owned the end-to-end RL training recipe for Nova Act. Designed and shipped an online data curator that improved RL sample efficiency. Diagnosed and resolved a training/inference mismatch that stabilized RL training at scale across agentic tasks. Drove measurable gains in training data diversity and reliability.
+            Built and shipped Nova Act's RL recipe from scratch. Led algorithm experiments, RL environment scoping, and public benchmark hill-climbing; designed an online data curator and fixed reward collapse and train–inference mismatch to stabilize learning at scale.
           </p>
           <div class="flex flex-wrap gap-2 mb-5">
             <span class="text-xs px-2.5 py-1 bg-stone-100 dark:bg-stone-800/50 text-stone-500 dark:text-stone-400 rounded-full">Reinforcement Learning</span>
@@ -86,12 +86,12 @@ import Layout from '../layouts/Layout.astro';
             <span class="text-xs px-2.5 py-1 bg-stone-100 dark:bg-stone-800/50 text-stone-500 dark:text-stone-400 rounded-full">LLM Post-Training</span>
           </div>
           <a
-            href="https://aws.amazon.com/blogs/aws/build-reliable-ai-agents-for-ui-workflow-automation-with-amazon-nova-act-now-generally-available/"
+            href="https://www.amazon.science/blog/amazon-nova-act-service"
             target="_blank"
             rel="noopener noreferrer"
             class="inline-flex items-center gap-1.5 text-sm text-accent-600 dark:text-accent-400 hover:text-accent-700 dark:hover:text-accent-300 transition-colors duration-300 group"
           >
-            Read AWS Blog Post
+            Read the Nova Act launch story
             <svg class="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
             </svg>
